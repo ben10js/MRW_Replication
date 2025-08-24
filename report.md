@@ -18,64 +18,79 @@
 4.  **기간별 분석:** 1960-1985년 (원 논문 기간)과 1986-2019년 (확장 기간)으로 나누어 각 시기의 성장 모델 파라미터 및 수렴 속도 변화를 비교하여, 세계 경제 환경 변화의 영향을 구체적으로 식별한다.
 5.  **내생성 문제 해결:** 저축률, 인구 증가율, 인적 자본 축적률의 내생성 문제를 해결하기 위해 제도적 요인(예: 법치주의 지수, 거버넌스 지표)이나 지리적 요인 등 강건한 도구 변수를 활용하는 방법을 모색한다.
 
----
 
 ## 2. 연구 방법론 (Methodology)
 
-본 연구는 Mankiw, Romer, Weil (1992, 이하 MRW)의 실증 분석 방법론을 충실히 따르면서, 데이터 기간과 표본 국가를 확장하여 그 견고성과 새로운 시사점을 탐색한다. 분석은 크게 두 가지 Solow 모델 변형(교과서적 Solow 모델, 인간 자본 증강 Solow 모델)에 대한 정상 상태(steady state) 분석과, 이들 모델의 동적 경로를 활용한 수렴(convergence) 분석으로 구성된다.
+본 연구는 Mankiw, Romer, Weil (1992, 이하 MRW)의 실증 분석 방법론을 충실히 따르면서, 데이터 기간과 표본 국가를 확장하고 최신 데이터 소스를 활용하여 그 견고성과 새로운 시사점을 탐색한다. 분석은 크게 두 가지 Solow 모델 변형(교과서적 Solow 모델, 인간 자본 증강 Solow 모델)에 대한 정상 상태(steady state) 분석과, 이들 모델의 동적 경로를 활용한 수렴(convergence) 분석으로 구성된다.
 
 ### 2.1. Solow 성장 모델의 이론적 배경
 
 **2.1.1. 교과서적 Solow 모델**
 MRW는 Solow (1956) 모델을 기반으로 생산 함수를 다음과 같은 Cobb-Douglas 형태로 가정한다:
+
 $$
 Y(t) = K(t)^\alpha (A(t)L(t))^{1-\alpha} \quad \text{where } 0 < \alpha < 1
 $$
+
 여기서 $Y$는 총생산, $K$는 물리적 자본, $L$은 노동, $A$는 기술 수준을 나타낸다. $A(t)L(t)$는 유효 노동(effective labor)을 의미하며, $L$과 $A$는 각각 외생적인 비율 $n$과 $g$로 성장한다고 가정한다: $L(t) = L(0)e^{nt}$, $A(t) = A(0)e^{gt}$.
 유효 노동 단위당 자본($k = K/AL$)의 변화율은 다음과 같다:
+
 $$
 \dot{k}(t) = s y(t) - (n + g + \delta) k(t) = s k(t)^\alpha - (n + g + \delta) k(t)
 $$
+
 여기서 $s$는 저축률, $\delta$는 감가상각률이다. 이 모델의 정상 상태 유효 노동 단위당 소득($y^* = Y^*/AL$)은 $k^*$에 의해 결정되며, 로그 형태로 표현하면 다음과 같다:
+
 $$
 \ln(y^*) = \ln A(0) + \frac{\alpha}{1-\alpha} \ln(s) - \frac{\alpha}{1-\alpha} \ln(n+g+\delta)
 $$
+
 이 방정식은 특정 시점의 국가별 소득 수준을 저축률, 인구 성장률, 그리고 기술 수준($A(0)$)으로 설명한다.
 
 **2.1.2. 인간 자본 증강 Solow 모델**
 MRW는 교과서적 Solow 모델의 한계를 극복하기 위해 인간 자본($H$)을 생산 함수에 도입한다. 증강된 생산 함수는 다음과 같다:
+
 $$
 Y(t) = K(t)^\alpha H(t)^\beta (A(t)L(t))^{1-\alpha-\beta} \quad \text{where } 0 < \alpha, \beta < 1 \text{ and } \alpha + \beta < 1
 $$
+
 여기서 $\alpha$는 물리적 자본의 소득 분배율, $\beta$는 인간 자본의 소득 분배율이다. 물리적 자본($s_k$)과 인간 자본($s_h$)에 대한 저축률을 각각 가정한 후, 유효 노동 단위당 자본($k=K/AL$)과 유효 노동 단위당 인간 자본($h=H/AL$)의 변화율을 도출한다.
 증강 모델의 정상 상태 유효 노동 단위당 소득($y^*$)은 다음과 같다:
+
 $$
 \ln(y^*) = \ln A(0) + \frac{\alpha}{1-\alpha-\beta} \ln(s_k) + \frac{\beta}{1-\alpha-\beta} \ln(s_h) - \frac{\alpha+\beta}{1-\alpha-\beta} \ln(n+g+\delta)
 $$
+
 이 모델은 물리적 자본 축적뿐만 아니라 인간 자본 축적이 소득 수준을 결정하는 데 중요한 역할을 함을 예측한다.
 
 ### 2.2. 수렴 이론 (Convergence Theory)
 
 Solow 모델은 국가들이 각자의 정상 상태로 수렴한다고 예측한다. 이 정상 상태는 국가별 저축률, 인구 증가율, 인간 자본 수준에 따라 달라지므로, Solow 모델은 **조건부 수렴(conditional convergence)**을 예측한다. 즉, 이러한 정상 상태 결정 요인을 통제하면 초기 소득이 낮은 국가가 높은 국가보다 빠르게 성장해야 한다. 수렴 속도 $\lambda$는 다음과 같이 근사될 수 있다:
+
 $$
 \lambda = (n+g+\delta)(1-\alpha-\beta)
 $$
+
 모델의 동적 경로를 고려한 회귀 분석은 다음 형태를 따른다:
+
 $$
 \ln(y_{\text{end}}) - \ln(y_{\text{start}}) = \text{const} + \gamma_1 \ln(y_{\text{start}}) + \gamma_2 \ln(s_k) + \gamma_3 \ln(s_h) + \gamma_4 \ln(n+g+\delta) + \epsilon
 $$
+
 여기서 $\gamma_1 = -(1-e^{-\lambda T})$이며, 이를 통해 암묵적 수렴 속도 $\lambda = -\ln(1+\gamma_1)/T$를 도출할 수 있다.
 
 ### 2.3. 데이터 및 표본
 
-본 연구는 1960년부터 2019년까지의 데이터를 활용하며, 이는 MRW 원 논문의 1960-1985년 기간보다 훨씬 긴 시계열이다. 표본 국가는 28개 OECD 회원국으로 구성되며, 구체적인 목록은 다음과 같다: AUT, BEL, DNK, FRA, DEU, GRC, ISL, IRL, ITA, LUX, NLD, NOR, POL, PRT, ESP, SWE, CHE, TUR, CZE, HUN, FIN, KOR, JPN, AUS, NZL, CAN, USA, MEX.
+본 연구는 1960년부터 2019년까지의 데이터를 활용하며, 이는 MRW 원 논문의 1960-1985년 기간보다 훨씬 긴 시계열이다 (총 기간 $T=59$년). 표본 국가는 28개 OECD 회원국으로 구성되며, 구체적인 목록은 다음과 같다: AUT, BEL, DNK, FRA, DEU, GRC, ISL, IRL, ITA, LUX, NLD, NOR, POL, PRT, ESP, SWE, CHE, TUR, CZE, HUN, FIN, KOR, JPN, AUS, NZL, CAN, USA, MEX.
 
 주요 변수의 측정은 다음과 같다:
-*   **소득 변수 ($\ln(y_{\text{start}}), \ln(y_{\text{end}})$):** 각 연도별 GDP를 `15-64세 유효 노동 인구`로 나눈 값의 로그를 취하여 사용한다. `15-64세 유효 노동 인구` 데이터는 WDI(World Development Indicators)에서 가져왔다.
-*   **투자율 ($\ln(I/GDP)$):** 실질 투자(정부 투자 포함)의 실질 GDP 대비 평균 비율의 로그를 사용한다. 이는 물리적 자본 축적률($s_k$)의 대리 변수이다.
-*   **인적 자본 ($\ln(HC\_avg)$):** PWT (Penn World Table) 10.0 버전에서 제공하는 `hc` (human capital index) 변수의 평균값을 로그 형태로 사용한다. PWT `hc`는 평균 교육 연한과 교육 수익률을 종합적으로 고려한 지표로, 원 논문의 유네스코 기반 2차 학교 등록률보다 인적 자본의 질적 측면을 더 잘 반영한다. 이는 인간 자본 축적률($s_h$)의 대리 변수이다.
-*   **인구 증가율 ($\ln(n+g+\delta)$):** `15-64세 유효 노동 인구` 데이터로부터 계산된 연평균 인구 성장률 $n$에 외생적으로 가정한 $g+\delta=0.05$ (기술 진보율 $g=0.02$, 감가상각률 $\delta=0.03$)를 더한 값의 로그를 사용한다.
+*   **소득 변수 (${\ln(y_{\text{start}}), \ln(y_{\text{end}})}$):** PWT (Penn World Table) 10.0에서 제공하는 `rgdpna` (Real GDP at constant 2017 national prices, in mil. 2017 US$)를 WDI(World Development Indicators)에서 제공하는 `Population ages 15-64, total` 인구 데이터로 나눈 값의 로그를 취하여 `유효 노동 단위당 초기/최종 산출량`으로 사용한다.
+*   **투자율 (${\ln(I/GDP)_{\text{avg}}}$):** PWT 10.0에서 제공하는 `csh_i` (Share of capital in income from investment goods) 변수의 기간 평균값의 로그를 사용한다. `csh_i`는 이미 GDP 대비 투자 비율로 제공되므로 추가 변환 없이 사용한다. 이는 물리적 자본 축적률($s_k$)의 대리 변수이다.
+*   **인적 자본 (${\ln(HC)_{\text{avg}}}$):** PWT 10.0에서 제공하는 `hc` (human capital index, based on years of schooling and returns to education) 변수의 기간 평균값의 로그를 사용한다. 이는 원 논문의 유네스코 기반 2차 학교 등록률보다 인적 자본의 질적 측면을 더 잘 반영하는 대리 변수이다. 이는 인간 자본 축적률($s_h$)의 대리 변수이다.
+*   **인구 증가율 (${\ln(n+g+\delta)}$):** WDI(World Development Indicators)의 `Population ages 15-64, total` 인구 데이터의 시작 연도와 종료 연도 값을 활용하여 연평균 인구 성장률 $n$을 계산한다. 이 $n$ 값에 외생적으로 가정한 $g+\delta=0.05$ (기술 진보율 $g=0.02$, 감가상각률 $\delta=0.03$)를 더한 값의 로그를 사용한다.
+
 모든 회귀 분석은 OLS(Ordinary Least Squares) 방식을 채택하며, `statsmodels` 라이브러리를 활용하여 추정한다. 파라미터 $\alpha, \beta, \lambda$는 회귀 계수로부터 MRW 논문에 제시된 공식에 따라 도출된다.
+
 
 ## 3. 실증 분석 결과 (Empirical Results)
 
